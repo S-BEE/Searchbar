@@ -1,0 +1,36 @@
+
+.hamburger{
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .hamburger{
+        display: block;
+    }
+    .menulist ul,.log, #lang{
+        display: none;
+    }
+    .expanded ul{
+        position: absolute;
+        margin-top: 25px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        height: calc(100vh - 70px);
+        background-color: #fff;
+        display: block;
+    }
+    .expanded li{
+        padding: 0.5rem; 
+    }
+
+    .expanded li a{
+        text-decoration: none;
+        color:#000;
+        font-weight: 800;
+        font-size: larger;
+    }
+}
