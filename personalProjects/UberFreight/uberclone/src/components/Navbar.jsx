@@ -20,7 +20,7 @@ const Navbar = ()=>{
             <header className="w-full fixed top-0 bg-[#000] py-[1%] px-[2%] z-40 flex justify-between ">
                 <div className="flex gap-[5%] items-center ">
                     <a href="www.uberfreight.com">
-                        <img src={logo} alt="uber-logo" width="100%"/>
+                        <img src={logo} alt="uber-logo" className='w-[100%] md:w-[50%] sm:w-[50%] '/>
                     </a>
                     <nav className={isClicked? "expanded":"menulist"}>
                         <ul className='flex gap-[3%] list-none '>

@@ -6,47 +6,55 @@ const Home = ()=>{
     return(
         <>
         
-        <main className="relative z-20 w-full">
-            <section className=" w-full relative h-screen ">
-                <video className="w-[100%] overflow-y-hidden" muted autoPlay playsInline loop preload='none'>
-                <source src="https://www.uberfreight.com/wp-content/themes/uberfreight/video/UberFreight-Desktop.mp4" type="video/mp4" />
-                </video> 
-                <div className="flex flex-col gap-[3rem] w-[40%] absolute top-[38%] text-[#fff] font-bold ml-[2rem]
-                sm:w-full sm:top-[10%] md:w-[75%]  md:top-[10%] sm:gap-[1rem] ">
-                    <h1 className="text-[4.5rem] leading-[2.7cm] sm:text-lg md:text-xl sm:leading-none md:leading-none">Move everything, forward</h1>
-                    <p className="text-[1.8rem] font-light leading-[1cm] sm:text-base sm:text-md ">Taking logistics in a new direction with an advanced platform for both shippers and carriers.</p>
+        <main className="z-20 w-full">
+            <section className=" w-full relative h-[100%] ">
+                <div className=" ">
+                    <video className="w-[100%] " muted autoPlay playsInline loop preload='none'>
+                    <source src="https://www.uberfreight.com/wp-content/themes/uberfreight/video/UberFreight-Desktop.mp4" type="video/mp4" />
+                    </video>
+                    {/* <video className="w-[100%] lg:hidden" muted autoPlay playsInline loop preload='none'>
+                    <source src="https://www.uberfreight.com/wp-content/themes/uberfreight/video/UberFreight-Mobile.mp4" type="video/mp4" />
+                    </video>  */}
+                </div>
+                
+                <div className="flex flex-col gap-[3rem] w-[40%] absolute top-[40%] text-[#fff] font-bold ml-[2rem]
+                sm:w-full sm:top-[20%] md:w-[75%]  md:top-[30%] sm:gap-[1rem] ">
+                    <h1 className="text-[4.5rem] leading-[2.7cm] sm:text-xl md:text-2xl sm:leading-none md:leading-normal">Move everything, forward</h1>
+                    <p className="text-[1.8rem] font-light leading-[1cm] sm:leading-none md:leading-normal sm:text-base md:text-lg ">Taking logistics in a new direction with an advanced platform for both shippers and carriers.</p>
                     <div className="btn">
-                        <button className="bg-[#000] text-[#fff] py-[1rem] px-[1.2rem] text-2xl sm:text-base md:text-lg ">Ship with us</button> 
+                        <button className="bg-[#000] text-[#fff] py-[1rem] px-[1.2rem] text-2xl sm:text-base md:py-1 md:px-2 md:text-lg ">Ship with us</button> 
                         <button className="bg-[#fff] text-[#000] py-[1rem] px-[1.2rem] text-2xl ml-[1.3rem]
-                        sm:py-1 sm:px-2 sm:text-base md:text-lg   ">Haul with us</button>
+                        sm:py-1 sm:px-2 sm:text-base md:text-lg md:py-1 md:px-2  ">Haul with us</button>
                     </div>
                 </div>
             </section>
-            <section className="w-full relative h-screen">
-                <div className="about-us">
-                    <div>
-                        <h2>Why Uber Freight?</h2>
-                        <p>Backed by innovative technology and a dedicated team of domain experts, 
+            <section className="w-full h-screen  fixed top-0 bottom-0 left-0 right-0 -z-10 flex flex-col gap-y-[6rem] bg-[#f2f2f2] p-[2rem] md:p-0 ">
+                <div className="flex gap-[10%] mt-[6rem] md:flex-col-reverse">
+                    <div className='flex flex-col gap-[15%] justify-center basis-2/5'>
+                        <h2 className=' text-4xl md:text-xl'>Why Uber Freight?</h2>
+                        <p className='text-2xl md:text-base'> Backed by innovative technology and a dedicated team of domain experts, 
                         Uber Freight is not just one of the largest logistics and transportation networks in the world. 
                         It’s a platform and service that helps shippers and carriers of all sizes take control of their
                         freight and deliver on their goals.</p>
-                        <a href="https://www.uberfreight.com/about-us/">Learn More</a>
+                        <a href="https://www.uberfreight.com/about-us/" className='underline text-3xl md:text-lg '>Learn More</a>
                     </div>
-                    <img src="images/img-01@2x-778x606.jpg" alt="" width="660px" height="390px" />
+                    <div className="">
+                    <img src="src/assets/images/img-01@2x-778x606.jpg" alt="" className='object-fit h-[500px] w-[900px] md:object-top  md:h-[200px] md:w-full  ' />
+                    </div>
+            
                 </div>
-                <div className="about-numbers">
+                <div className="flex gap-[40%] ">
                     <div className="cash-flow">
-                        <h2>$17B</h2>
-                        <h3>Freight Under Management</h3>
+                        <h2 className='text-[#276ef1] text-6xl'>$17B</h2>
+                        <h3 className='text-2xl font-normal text-[#5b5b5b]'>Freight Under Management</h3>
                     </div>
                     <div className="users">
-                        <h2>200K+</h2>
-                        <h3>Users on the platform</h3>
+                        <h2 className='text-[#276ef1] text-6xl' >200K+</h2>
+                        <h3 className='text-2xl font-light text-[#5b5b5b] ' >Users on the platform</h3>
                     </div>
                 </div>
             </section>
-            <section className=''>
-                
+            <section className='h-screen'>
             </section>
             <section className="service-section">
                <h2>Ship or haul with Uber Freight</h2>
