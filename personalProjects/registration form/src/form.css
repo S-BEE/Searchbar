@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: green;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    background:#fff;
+    padding: 25px 15px;
+    
+}
+
+input{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    width: 30rem;
+    height: 3rem;
+    padding: 5px;
+    background: rgb(228, 227, 227);
+}
+
+.btn{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
