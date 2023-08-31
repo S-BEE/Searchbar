@@ -10,7 +10,7 @@ const Form = ()=>{
         email:'',
     })
     const [submitted, setSubmission] = useState(false)
-    const [valid, setValid] = useState(true)
+    const [valid, setValid] = useState(false)
     
 
     const handleFirstName = (e)=>{
@@ -24,10 +24,13 @@ const Form = ()=>{
     }
     const handleSubmit = (e)=>{
        e.preventDefault();
-       if(values.firstName && values.lastName && values.email){
-
+       if(!values.firstName || !values.lastName || !values.email.includes('@')){
+        setValid(true)
+        }
+       else{
+        setSubmission(true)
        }
-       setSubmission(true);
+        
     }
 
     return(
@@ -35,19 +38,20 @@ const Form = ()=>{
         <div className="" >
             <div className="container">
                 <form action="" onSubmit={handleSubmit} >
-                   {submitted ? <div className="">Success! Thank you for registering</div> : null } 
+                   {submitted ? <div className="">Success! Thank you for registering </div> : null } 
+                   
                     <input type="text" placeholder='First Name' name='firstName' value={values.firstName} onChange={handleFirstName} />
-                    { submitted && !values.firstName? <span>please, enter a first name!</span> : null }
+                    {valid ? <span>please, enter a first name!</span> : null }
                     <input type="text" placeholder='Last Name' name='lastName' value={values.lastName} onChange={handleLastName} />
-                    {submitted && !values.lastName ? <span>please, enter a last name!</span> : null}
+                    {valid ? <span>please, enter a last name!</span> : null}
                     <input type="text" placeholder='Email' id='email' value={values.email} onChange={handleEmail} />
-                    {submitted && !values.email.includes('@') ? <span>please, enter a valid email!</span> : null}
+                    {valid ?  <span>please, enter a valid email!</span> : null}
                     <button type='submit'  className='btn' >Register</button>
             
 
                 </form>
             </div>
-        </div>
+        </div>/
         
         </>
 
