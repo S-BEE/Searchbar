@@ -5,10 +5,10 @@ const Quiz = ()=>{
     const questions =[
         {text:'What is the capital of Lagos ?', 
         options:[
-            {answerText:'lagos' , isCorrect: true},
-            {answerText:'laos' , isCorrect: false},
-            {answerText:'los Angeles' , isCorrect: false},
-            {answerText:'lome' , isCorrect: false}
+            {answerText:'Ikeja' , isCorrect: true},
+            {answerText:'Laos' , isCorrect: false},
+            {answerText:'Los Angeles' , isCorrect: false},
+            {answerText:'Lome' , isCorrect: false}
         ]},
         {text:'Who is the president of Nigeria ?', 
             options:[
